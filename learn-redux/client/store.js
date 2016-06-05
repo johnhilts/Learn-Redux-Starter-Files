@@ -1,4 +1,4 @@
-import {creaeStore, compose} from 'redux';
+import {createStore, compose} from 'redux';
 import {syncHistoryWithStore} from 'react-router-redux';
 import {browserHistory} from 'react-router';
 
@@ -21,7 +21,7 @@ but we can use this short-cut form because the names are the same
 I think he said this is possible with ES6 
 */
 
-const store = creaeStore(rootReducer, defaultState);
+const store = createStore(rootReducer, defaultState);
 
 export const history = syncHistoryWithStore(browserHistory, store);
 
