@@ -21,6 +21,10 @@ but we can use this short-cut form because the names are the same
 I think he said this is possible with ES6 
 */
 
+const enhancers = compose(
+  window.devToolsExtension ? window.devToolsExtension() : f => f
+);
+
 const store = createStore(rootReducer, defaultState);
 
 export const history = syncHistoryWithStore(browserHistory, store);
